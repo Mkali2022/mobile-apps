@@ -1,0 +1,85 @@
+name: driver_app
+description: A new Flutter project.
+
+
+publish_to: 'none'
+
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.17.4 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+
+
+  cupertino_icons: ^1.0.2
+  get: ^4.6.1
+  get_storage: ^2.0.3
+  intl: ^0.17.0
+  internet_connection_checker: ^0.0.1+4
+  sliding_up_panel: ^2.0.0+1
+  flutter_spinkit:
+  quickalert: ^1.0.0
+  cached_network_image: ^3.2.0
+  firebase_core: ^2.1.1
+  firebase_messaging: ^14.0.4
+  firebase_analytics: ^10.0.4
+  firebase_database: ^10.0.4
+  device_info_plus: ^8.0.0
+  shared_preferences: ^2.0.13
+  package_info_plus: ^3.0.1
+  flutter_local_notifications: ^12.0.3
+  flutter_app_badger: ^1.4.0
+  just_audio: ^0.9.20
+  firebase_auth: ^4.1.1
+  flutter_foreground_task: ^3.7.3
+  geocoding: ^2.0.4
+  geocoder2:
+  geocode: ^1.0.1
+  url_launcher: ^6.0.20
+  android_intent_plus: ^3.1.1
+  maps_launcher: ^2.0.1
+  path_provider: ^2.0.9
+  google_map_polyline_new: ^0.3.0+2
+  location: ^4.4.0
+  google_maps_flutter: ^2.1.8
+  fluttertoast: ^8.0.9
+  flutter_rating_bar: ^4.0.0
+  geolocator: ^9.0.2
+  file_picker: ^5.2.2
+  uuid: ^3.0.6
+  shimmer: ^2.0.0
+  sms_autofill: ^2.2.0
+  intl_phone_number_input: ^0.7.0+2
+  pinput: ^1.2.2
+  hijri: ^3.0.0
+  hijri_picker: ^3.0.0
+  image_picker: ^0.8.5+3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+
+  flutter_lints: ^2.0.0
+
+
+flutter:
+
+
+  uses-material-design: true
+  assets:
+    - assets/
+    - assets/audio/Notification.wav
+
+
+  fonts:
+    - family: alqabas
+      fonts:
+        - asset: fonts/qabas-regular.ttf
+        - asset: fonts/qabas-bold.ttf
+        - asset: fonts/qabas-light.ttf
