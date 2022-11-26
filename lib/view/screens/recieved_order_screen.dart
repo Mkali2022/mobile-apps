@@ -42,11 +42,11 @@ class _ReceivedOrderScreenState extends State<ReceivedOrderScreen> {
                           color: Colors.red,
                           borderRadius: BorderRadius.circular(1000)
                       ),
-                      child: const Padding(
-                        padding: EdgeInsets.symmetric(vertical: 10,horizontal: 20),
+                      child:  Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 10,horizontal: 20),
                         child: Text(
-                          "Reject",
-                          style: TextStyle(
+                          "Reject".tr,
+                          style: const TextStyle(
                               color: Colors.white,
                               fontSize: 19
                           ),
@@ -66,11 +66,11 @@ class _ReceivedOrderScreenState extends State<ReceivedOrderScreen> {
                         color: AppColors.blue,
                         borderRadius: BorderRadius.circular(1000)
                       ),
-                      child: const Padding(
-                        padding: EdgeInsets.symmetric(vertical: 10,horizontal: 20),
+                      child:  Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 10,horizontal: 20),
                         child: Text(
-                          "Accept",
-                          style: TextStyle(
+                          "Accept".tr,
+                          style: const TextStyle(
                             color: Colors.white,
                             fontSize: 19
                           ),
@@ -122,10 +122,10 @@ class _ReceivedOrderScreenState extends State<ReceivedOrderScreen> {
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: const [
+                  children:  [
                     Text(
-                      "New Order!",
-                      style: TextStyle(
+                      "New Order!".tr,
+                      style: const TextStyle(
                           fontSize: 28,
                           fontWeight: FontWeight.bold
                       ),
@@ -168,9 +168,9 @@ class _ReceivedOrderScreenState extends State<ReceivedOrderScreen> {
                               ),
                             ],
                           ),
-                          title: const Text(
-                            "From",
-                            style: TextStyle(color: Colors.grey),
+                          title:  Text(
+                            "From".tr,
+                            style: const TextStyle(color: Colors.grey),
                           ),
                           leading: Container(
                             width: MediaQuery.of(context).size.width * 0.03,
@@ -201,9 +201,9 @@ class _ReceivedOrderScreenState extends State<ReceivedOrderScreen> {
                               ),
                             ],
                           ),
-                          title: const Text(
-                            "To",
-                            style: TextStyle(color: Colors.grey),
+                          title:  Text(
+                            "To".tr,
+                            style: const TextStyle(color: Colors.grey),
                           ),
                           leading: Container(
                             width: MediaQuery.of(context).size.width * 0.03,

@@ -24,9 +24,9 @@ class OrderScreen extends StatelessWidget {
             appBar: AppBar(
               backgroundColor: Colors.white,
               centerTitle: true,
-              title:  const Text(
-                "Order #164",
-                style: TextStyle(
+              title:   Text(
+                "${"Order".tr} #164",
+                style: const TextStyle(
                     fontSize: 24,
                     fontWeight: FontWeight.bold,
                     color: Colors.black
@@ -115,7 +115,7 @@ class OrderScreen extends StatelessWidget {
                                              borderRadius:
                                              BorderRadius.circular(
                                                  10)),
-                                         labelText: 'write',
+                                         labelText: 'write'.tr,
                                        ),
                                        maxLines: 4,
                                      ),
@@ -132,8 +132,8 @@ class OrderScreen extends StatelessWidget {
                                          style: ElevatedButton.styleFrom(
                                              shape: const StadiumBorder(),
                                              primary: Colors.green[500]),
-                                         child: const Text('Send',
-                                             style: TextStyle(
+                                         child:  Text('Send'.tr,
+                                             style: const TextStyle(
                                                  fontSize: 20,
                                                  color: Colors.black
                                              )
@@ -233,9 +233,9 @@ class OrderScreen extends StatelessWidget {
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                const Text(
-                                  "Pickup information",
-                                  style: TextStyle(
+                                 Text(
+                                  "Pickup information".tr,
+                                  style: const TextStyle(
                                       fontSize: 18,
                                       fontWeight: FontWeight.w500,
                                       color: Colors.black
@@ -257,14 +257,14 @@ class OrderScreen extends StatelessWidget {
                                       padding: const EdgeInsets.symmetric(horizontal: 8.0,vertical: 2),
                                       child: Row(
                                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                        children: const [
+                                        children:  [
                                           Text(
-                                            "Map it",
-                                            style: TextStyle(
+                                            "Map it".tr,
+                                            style: const TextStyle(
                                                 color: Colors.white
                                             ),
                                           ),
-                                          Icon(Icons.navigation_rounded,color: Colors.white,size: 20,)
+                                          const Icon(Icons.navigation_rounded,color: Colors.white,size: 20,)
                                         ],
                                       ),
                                     ),
@@ -324,9 +324,9 @@ class OrderScreen extends StatelessWidget {
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                const Text(
-                                  "Delivery information",
-                                  style: TextStyle(
+                                 Text(
+                                  "Delivery information".tr,
+                                  style: const TextStyle(
                                       fontSize: 18,
                                       fontWeight: FontWeight.w500,
                                       color: Colors.black
@@ -348,14 +348,14 @@ class OrderScreen extends StatelessWidget {
                                       padding: const EdgeInsets.symmetric(horizontal: 8.0,vertical: 2),
                                       child: Row(
                                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                        children: const [
+                                        children:  [
                                           Text(
-                                            "Map it",
-                                            style: TextStyle(
+                                            "Map it".tr,
+                                            style: const TextStyle(
                                                 color: Colors.white
                                             ),
                                           ),
-                                          Icon(Icons.navigation_rounded,color: Colors.white,size: 20,)
+                                          const Icon(Icons.navigation_rounded,color: Colors.white,size: 20,)
                                         ],
                                       ),
                                     ),
@@ -444,10 +444,10 @@ class OrderScreen extends StatelessWidget {
                             padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 10),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: const [
+                              children:  [
                                 Text(
-                                  "Order information",
-                                  style: TextStyle(
+                                  "Order information".tr,
+                                  style: const TextStyle(
                                       fontSize: 18,
                                       fontWeight: FontWeight.w500,
                                       color: Colors.black
@@ -545,10 +545,10 @@ class OrderScreen extends StatelessWidget {
                     child: Column(
                       children: [
                         Row(
-                          children: const [
+                          children:  [
                             Text(
-                              "Payment Method",
-                              style: TextStyle(
+                              "Payment Method".tr,
+                              style: const TextStyle(
                                   fontSize: 18,
                                   fontWeight: FontWeight.w500,
                                   color: Colors.black
@@ -580,10 +580,10 @@ class OrderScreen extends StatelessWidget {
                     child: Column(
                       children: [
                         Row(
-                          children: const [
+                          children:  [
                             Text(
-                              "Total Price",
-                              style: TextStyle(
+                              "Total Price".tr,
+                              style: const TextStyle(
                                   fontSize: 18,
                                   fontWeight: FontWeight.w500,
                                   color: Colors.black
@@ -619,7 +619,7 @@ class OrderScreen extends StatelessWidget {
                         QuickAlert.show(
                             context: context,
                             type: QuickAlertType.loading,
-                            text: 'Please wait..',
+                            text: 'Please wait..'.tr,
                         );
                         Future.delayed(const Duration(seconds: 3)).whenComplete(() {
                           controller.index =0;

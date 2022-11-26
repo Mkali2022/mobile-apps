@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../widgets/order_history_widget.dart';
+import '../widgets/notification_widget.dart';
 
-class HistoryScreen extends StatelessWidget {
-  const HistoryScreen({Key? key}) : super(key: key);
+class NotificationsScreen extends StatelessWidget {
+  const NotificationsScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +14,7 @@ class HistoryScreen extends StatelessWidget {
         backgroundColor: Colors.white,
         centerTitle: true,
         title:   Text(
-          "Order History".tr,
+          "Notifications".tr,
           style: const TextStyle(
               fontSize: 24,
               fontWeight: FontWeight.bold,
@@ -32,15 +32,22 @@ class HistoryScreen extends StatelessWidget {
           ),
         ),
       ),
-      body: SingleChildScrollView(
+      body: ListView.builder(
         physics: const BouncingScrollPhysics(),
-        child: Column(
-          children: const [
-            OrderHistoryWidget(),
-            OrderHistoryWidget(),
-            OrderHistoryWidget(),
-          ],
-        ),
+          shrinkWrap: true,
+          itemCount: 10,
+          padding: const EdgeInsets.symmetric(vertical: 5,horizontal: 0),
+          itemBuilder: (context,index){
+            return Column(
+              children: const [
+                Padding(
+                  padding: EdgeInsets.only(top: 3,bottom: 3,left: 7,right: 7),
+                  child: NotificationWidget(),
+                ),
+                Divider()
+              ],
+            );
+          }
       ),
     );
   }

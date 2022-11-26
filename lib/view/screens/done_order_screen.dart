@@ -15,9 +15,9 @@ class DoneOrderScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.white,
         centerTitle: true,
-        title:  const Text(
-          "Order #164",
-          style: TextStyle(
+        title:   Text(
+          "${"Order".tr}#164",
+          style: const TextStyle(
               fontSize: 24,
               fontWeight: FontWeight.bold,
               color: Colors.black
@@ -53,10 +53,10 @@ class DoneOrderScreen extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 10),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
+              children:  [
                 Text(
-                  "Your order #164 has been success",
-                  style: TextStyle(
+                  "${"Your order".tr}#164${"has been success".tr}",
+                  style: const TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.w500,
                       color: Colors.black
@@ -70,10 +70,10 @@ class DoneOrderScreen extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 4),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
+              children:  [
                 Text(
-                  "We appreciate your effort",
-                  style: TextStyle(
+                  "We appreciate your effort".tr,
+                  style: const TextStyle(
                       fontSize: 17,
                       fontWeight: FontWeight.w400,
                       color: Colors.black54
@@ -89,8 +89,8 @@ class DoneOrderScreen extends StatelessWidget {
               onTap: (){
                 Get.to(()=>const HomeScreen());
               },
-              child:  const CustomButton(
-                  title: "Confirm",
+              child:   CustomButton(
+                  title: "Confirm".tr,
                   color: AppColors.blue
               ),
             ),

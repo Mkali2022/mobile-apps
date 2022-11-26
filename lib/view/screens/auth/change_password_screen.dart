@@ -27,10 +27,10 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: Text("Update Password",
-                      style: TextStyle(
+                 Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text("Update Password".tr,
+                      style: const TextStyle(
                           color: AppColors.blue,
                           fontSize: 32,
                           fontWeight: FontWeight.w400)),
@@ -41,7 +41,7 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25),
                   child: PassTextFild(
-                    hintText: 'Password',
+                    hintText: 'Password'.tr,
                     controller: password,
                     isShowBorder: true,
                     isPassword: true,
@@ -52,7 +52,7 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25),
                   child: PassTextFild(
-                    hintText: 'Re-Password',
+                    hintText: 'Re-Password'.tr,
                     controller: repass,
                     isShowBorder: true,
                     isPassword: true,
@@ -71,8 +71,8 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
                     onTap: (){
                     Get.to(LoginScreen());
                     },
-                    child: const CustomButton(
-                      title: "Save",
+                    child:  CustomButton(
+                      title: "Save".tr,
                       color: AppColors.blue
                     )
                 ),

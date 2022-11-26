@@ -42,9 +42,9 @@ class LoginScreen extends StatelessWidget {
                 const SizedBox(
                   height: 62,
                 ),
-                const Text(
-                  "Login",
-                  style: TextStyle(
+                 Text(
+                  "Login".tr,
+                  style: const TextStyle(
                       color: AppColors.blue,
                       fontSize: 24,
                       fontWeight: FontWeight.w700),
@@ -74,7 +74,7 @@ class LoginScreen extends StatelessWidget {
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 25,vertical: 10),
                           child: PassTextFild(
-                            hintText: 'Email',
+                            hintText: 'Email'.tr,
                             controller: userName,
                             isShowBorder: true,
                             autoValidate: false,
@@ -85,7 +85,7 @@ class LoginScreen extends StatelessWidget {
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 25),
                           child: PassTextFild(
-                            hintText: 'Password',
+                            hintText: 'Password'.tr,
                             controller: password,
                             isShowBorder: true,
                             autoValidate: false,
@@ -101,8 +101,8 @@ class LoginScreen extends StatelessWidget {
                           onTap: () {
                             Get.to(VerifyPhone(""));
                           },
-                          child: const CustomButton(
-                              title: "Login",
+                          child:  CustomButton(
+                              title: "Login".tr,
                               color: AppColors.blue),
                         ),
 
@@ -114,10 +114,10 @@ class LoginScreen extends StatelessWidget {
                                   onPressed: () {
                                     Get.to(const ForgetPasswordPage());
                                   },
-                                  child: const Text(
-                                    'Forget Password?',
+                                  child:  Text(
+                                    'Forget Password?'.tr,
                                     textAlign: TextAlign.start,
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                         color: AppColors.blue,
                                         fontWeight: FontWeight.bold),
                                   ))),
@@ -129,8 +129,8 @@ class LoginScreen extends StatelessWidget {
                             onTap: () {
                              Get.to(() => RegisterScreen());
                             },
-                            child: const CustomButton(
-                                title: "Sign up", color: AppColors.blue)),
+                            child:  CustomButton(
+                                title: "Sign up".tr, color: AppColors.blue)),
                         const SizedBox(
                           height: 32,
                         ),

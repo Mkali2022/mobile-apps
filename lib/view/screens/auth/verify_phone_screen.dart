@@ -77,8 +77,8 @@ class _VerifyPhoneState extends State<VerifyPhone> with TickerProviderStateMixin
                           SizedBox(
                             height: MediaQuery.of(context).size.height * 0.05,
                           ),
-                          const Text("phone authentication",
-                              style: TextStyle(
+                           Text("phone authentication".tr,
+                              style: const TextStyle(
                             color: Colors.black,
                                 fontWeight: FontWeight.bold,
                                 fontSize: 19
@@ -86,9 +86,9 @@ class _VerifyPhoneState extends State<VerifyPhone> with TickerProviderStateMixin
                           SizedBox(
                             height: MediaQuery.of(context).size.height * 0.015,
                           ),
-                          const Text(
-                            "We send code to +962700110011 to verify your account, please enter code that received to your mobile number.",
-                            style:  TextStyle(
+                           Text(
+                            "We send code to you to verify your account, please enter code that received to your mobile number.".tr,
+                            style:  const TextStyle(
                                 color: Colors.black54,
                                 fontWeight: FontWeight.normal,
                                 fontSize: 16

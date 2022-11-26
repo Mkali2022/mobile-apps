@@ -41,19 +41,19 @@ class _ForgetPasswordPageState extends State<ForgetPasswordPage> {
                           SizedBox(
                             height: Get.height * .05,
                           ),
-                          const Padding(
-                            padding: EdgeInsets.all(8.0),
-                            child: Text("What is your phone number?",
-                                style: TextStyle(
+                           Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text("What is your phone number?".tr,
+                                style: const TextStyle(
                                     color: AppColors.blue,
                                     fontSize: 32,
                                     fontWeight: FontWeight.w400)),
                           ),
-                          const Padding(
-                            padding: EdgeInsets.all(8.0),
+                           Padding(
+                            padding: const EdgeInsets.all(8.0),
                             child: Text(
-                              "Tap Get Started to get an SMS confirmation to help you use OTP. We would like your phone number.",
-                              style: TextStyle(color: AppColors.blue),
+                              "Tap Get Started to get an SMS confirmation to help you use OTP. We would like your phone number.".tr,
+                              style: const TextStyle(color: AppColors.blue),
                             ),
                           ),
                           SizedBox(
@@ -118,16 +118,16 @@ class _ForgetPasswordPageState extends State<ForgetPasswordPage> {
                                   textFieldController:
                                   controller.phoneController,
                                   inputBorder: InputBorder.none,
-                                  inputDecoration: const InputDecoration(
-                                    border: OutlineInputBorder(),
+                                  inputDecoration:  InputDecoration(
+                                    border: const OutlineInputBorder(),
                                     focusedBorder: InputBorder.none,
                                     enabledBorder: InputBorder.none,
-                                    errorStyle: TextStyle(height: 0),
-                                    labelStyle:TextStyle(color: Colors.black,fontSize: 17,height: 3),
-                                    contentPadding: EdgeInsets.only(bottom: 12,left: 8,right: 8),
+                                    errorStyle: const TextStyle(height: 0),
+                                    labelStyle:const TextStyle(color: Colors.black,fontSize: 17,height: 3),
+                                    contentPadding: const EdgeInsets.only(bottom: 12,left: 8,right: 8),
                                     hintStyle:
-                                    TextStyle(color: Color(0xFFACACAC), fontSize: 14),
-                                    hintText: "Phone Number",
+                                    const TextStyle(color: Color(0xFFACACAC), fontSize: 14),
+                                    hintText: "Phone Number".tr,
                                   ),
                                   selectorConfig: const SelectorConfig(
                                     selectorType: PhoneInputSelectorType.DIALOG,
@@ -173,16 +173,16 @@ class _ForgetPasswordPageState extends State<ForgetPasswordPage> {
                               onTap: () async {
                                   String _mob = controller.phoneController.text;
                                   if (_mob.isEmpty) {
-                                    ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-                                      content: Text("Phone cannot be empty"),
+                                    ScaffoldMessenger.of(context).showSnackBar( SnackBar(
+                                      content: Text("Phone cannot be empty".tr),
                                       backgroundColor: Colors.red,
                                     ));
                                   }else{
                                     Get.to(const ChangePasswordScreen());
                                   }
                               },
-                              child: const CustomButton(
-                                title: "Next",
+                              child:  CustomButton(
+                                title: "Next".tr,
                                 color: AppColors.blue,
                               )),
                         ],

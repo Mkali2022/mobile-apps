@@ -59,6 +59,8 @@ dependencies:
   hijri: ^3.0.0
   hijri_picker: ^3.0.0
   image_picker: ^0.8.5+3
+  flutter_credit_card: ^3.0.1
+  credit_card_validator: ^2.0.1
 
 dev_dependencies:
   flutter_test:

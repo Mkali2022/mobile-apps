@@ -101,17 +101,17 @@ class RegisterScreen extends StatelessWidget {
                                     return'';
                                   else return null;
                                 },
-                                decoration: const InputDecoration(
-                                  hintText: 'First name',
-                                  label: Text('First name'),
-                                  border: OutlineInputBorder(),
+                                decoration:  InputDecoration(
+                                  hintText: 'First name'.tr,
+                                  label: Text('First name'.tr),
+                                  border: const OutlineInputBorder(),
                                   focusedBorder: InputBorder.none,
                                   enabledBorder: InputBorder.none,
-                                  errorStyle: TextStyle(height: 0),
-                                  labelStyle:TextStyle(color: Colors.black),
-                                  contentPadding: EdgeInsets.only(bottom: 0,left: 8,right: 8),
+                                  errorStyle: const TextStyle(height: 0),
+                                  labelStyle:const TextStyle(color: Colors.black),
+                                  contentPadding: const EdgeInsets.only(bottom: 0,left: 8,right: 8),
                                   hintStyle:
-                                  TextStyle(color: Color(0xFFACACAC), fontSize: 14),
+                                  const TextStyle(color: Color(0xFFACACAC), fontSize: 14),
                                 ),
                                 textDirection: controller
                                         .isRTL(controller.fNameController.text)
@@ -153,17 +153,17 @@ class RegisterScreen extends StatelessWidget {
                                     return'';
                                   else return null;
                                 },
-                                decoration: const InputDecoration(
-                                  hintText: 'Last name',
-                                  label: Text('Last name'),
-                                  border: OutlineInputBorder(),
+                                decoration:  InputDecoration(
+                                  hintText: 'Last name'.tr,
+                                  label: Text('Last name'.tr),
+                                  border: const OutlineInputBorder(),
                                   focusedBorder: InputBorder.none,
                                   enabledBorder: InputBorder.none,
-                                  errorStyle: TextStyle(height: 0),
-                                  labelStyle:TextStyle(color: Colors.black),
-                                  contentPadding: EdgeInsets.only(bottom: 0,left: 8,right: 8),
+                                  errorStyle: const TextStyle(height: 0),
+                                  labelStyle:const TextStyle(color: Colors.black),
+                                  contentPadding: const EdgeInsets.only(bottom: 0,left: 8,right: 8),
                                   hintStyle:
-                                  TextStyle(color: Color(0xFFACACAC), fontSize: 14),
+                                  const TextStyle(color: const Color(0xFFACACAC), fontSize: 14),
                                 ),
                                 onChanged: (value) {
                                   controller.lNameController.text = value.trim();
@@ -236,16 +236,16 @@ class RegisterScreen extends StatelessWidget {
                                   textFieldController:
                                   controller.phoneController,
                                   inputBorder: InputBorder.none,
-                                  inputDecoration: const InputDecoration(
-                                      border: OutlineInputBorder(),
+                                  inputDecoration:  InputDecoration(
+                                      border: const OutlineInputBorder(),
                                       focusedBorder: InputBorder.none,
                                       enabledBorder: InputBorder.none,
-                                      errorStyle: TextStyle(height: 0),
-                                      labelStyle:TextStyle(color: Colors.black,fontSize: 17,height: 3),
-                                      contentPadding: EdgeInsets.only(bottom: 12,left: 8,right: 8),
+                                      errorStyle: const TextStyle(height: 0),
+                                      labelStyle:const TextStyle(color: Colors.black,fontSize: 17,height: 3),
+                                      contentPadding: const EdgeInsets.only(bottom: 12,left: 8,right: 8),
                                       hintStyle:
-                                      TextStyle(color: Color(0xFFACACAC), fontSize: 14),
-                                      hintText: "Phone Number",
+                                      const TextStyle(color: Color(0xFFACACAC), fontSize: 14),
+                                      hintText: "Phone Number".tr,
                                   ),
                                   selectorConfig: const SelectorConfig(
                                     selectorType: PhoneInputSelectorType.DIALOG,
@@ -304,16 +304,16 @@ class RegisterScreen extends StatelessWidget {
                             child: Padding(
                               padding: const EdgeInsets.symmetric(horizontal: 15,vertical: 8),
                               child:TextFormField(
-                                decoration: const InputDecoration(
-                                  hintText: 'Email',
-                                  label: Text('Email'),
+                                decoration:  InputDecoration(
+                                  hintText: 'Email'.tr,
+                                  label: Text('Email'.tr),
                                   border: InputBorder.none,
-                                  errorBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.red)),
-                                  errorStyle: TextStyle(height: 0),
-                                  labelStyle:TextStyle(color: Colors.black),
-                                  contentPadding: EdgeInsets.only(bottom: 0,left: 8,right: 8),
+                                  errorBorder: const OutlineInputBorder(borderSide: BorderSide(color: Colors.red)),
+                                  errorStyle: const TextStyle(height: 0),
+                                  labelStyle:const TextStyle(color: Colors.black),
+                                  contentPadding: const EdgeInsets.only(bottom: 0,left: 8,right: 8),
                                   hintStyle:
-                                  TextStyle(color: Color(0xFFACACAC), fontSize: 14),
+                                  const TextStyle(color: Color(0xFFACACAC), fontSize: 14),
                                 ),
                                 onChanged: (value) {
                                   controller.emailController.text = value.trim();
@@ -376,9 +376,9 @@ class RegisterScreen extends StatelessWidget {
                                     horizontal: 15, vertical: 17),
                                 child: Row(
                                   children: [
-                                    const Text(
-                                      "Date of birth",
-                                      style: TextStyle(color: Colors.grey),
+                                     Text(
+                                      "Date of birth".tr,
+                                      style: const TextStyle(color: Colors.grey),
                                     ),
                                     Expanded(
                                       child: Center(
@@ -513,30 +513,28 @@ class RegisterScreen extends StatelessWidget {
                             padding: const EdgeInsets.symmetric(vertical: 20),
                             child: Align(
                               alignment: Alignment.bottomCenter,
-                              child: Container(
-                                child: ElevatedButton(
-                                  style: ButtonStyle(
-                                      shape: MaterialStateProperty.all(
-                                        RoundedRectangleBorder(
-                                            borderRadius:
-                                                BorderRadius.circular(12)),
-                                      ),
-                                      backgroundColor: MaterialStateProperty.all(
-                                          AppColors.blue)),
-                                  onPressed: () {
-                                   if(firstFormKey.currentState!.validate()){
-                                     controller.checkData();
-                                   }
-                                  },
-                                  child: const Padding(
-                                    padding: EdgeInsets.symmetric(
-                                        horizontal: 30, vertical: 12),
-                                    child: Text(
-                                      "Next",
-                                      style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 20,
-                                      ),
+                              child: ElevatedButton(
+                                style: ButtonStyle(
+                                    shape: MaterialStateProperty.all(
+                                      RoundedRectangleBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(12)),
+                                    ),
+                                    backgroundColor: MaterialStateProperty.all(
+                                        AppColors.blue)),
+                                onPressed: () {
+                                 if(firstFormKey.currentState!.validate()){
+                                   controller.checkData();
+                                 }
+                                },
+                                child:  Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: 30, vertical: 12),
+                                  child: Text(
+                                    "Next".tr,
+                                    style: const TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 20,
                                     ),
                                   ),
                                 ),
@@ -554,11 +552,11 @@ class RegisterScreen extends StatelessWidget {
                               const SizedBox(
                                 height: 40,
                               ),
-                              const Padding(
-                                padding: EdgeInsets.all(15.0),
+                               Padding(
+                                padding: const EdgeInsets.all(15.0),
                                 child: Text(
-                                  "Car info",
-                                  style: TextStyle(
+                                  "Car info".tr,
+                                  style: const TextStyle(
                                       fontSize: 22, fontWeight: FontWeight.bold),
                                 ),
                               ),
@@ -603,17 +601,17 @@ class RegisterScreen extends StatelessWidget {
                                       controller.update();
                                     },
                                     style: const TextStyle(color: Colors.black,height: .5),
-                                    decoration: const InputDecoration(
-                                      label: Text("ID number"),
-                                      hintText: "ID number",
-                                      border: OutlineInputBorder(),
+                                    decoration:  InputDecoration(
+                                      label: Text("ID number".tr),
+                                      hintText: "ID number".tr,
+                                      border: const OutlineInputBorder(),
                                       focusedBorder: InputBorder.none,
                                       enabledBorder: InputBorder.none,
-                                      errorStyle: TextStyle(height: 0),
-                                      labelStyle:TextStyle(color: Colors.black),
-                                      contentPadding: EdgeInsets.only(bottom: 0,left: 8,right: 8),
-                                      hintStyle: TextStyle(
-                                          color: Color(0xFFACACAC), fontSize: 14),
+                                      errorStyle: const TextStyle(height: 0),
+                                      labelStyle:const TextStyle(color: Colors.black),
+                                      contentPadding: const EdgeInsets.only(bottom: 0,left: 8,right: 8),
+                                      hintStyle: const TextStyle(
+                                          color: const Color(0xFFACACAC), fontSize: 14),
                                     ),
                                   ),
                                 ),
@@ -659,16 +657,16 @@ class RegisterScreen extends StatelessWidget {
                                       controller.update();
                                     },
                                     style: const TextStyle(color: Colors.black,height: .5),
-                                    decoration: const InputDecoration(
-                                      label: Text("Sequence number"),
-                                      hintText: "Sequence number",
-                                      border: OutlineInputBorder(),
+                                    decoration:  InputDecoration(
+                                      label: Text("Sequence number".tr),
+                                      hintText: "Sequence number".tr,
+                                      border: const OutlineInputBorder(),
                                       focusedBorder: InputBorder.none,
                                       enabledBorder: InputBorder.none,
-                                      errorStyle: TextStyle(height: 0),
-                                      labelStyle:TextStyle(color: Colors.black),
-                                      contentPadding: EdgeInsets.only(bottom: 0,left: 8,right: 8),
-                                      hintStyle: TextStyle(
+                                      errorStyle: const TextStyle(height: 0),
+                                      labelStyle:const TextStyle(color: Colors.black),
+                                      contentPadding: const EdgeInsets.only(bottom: 0,left: 8,right: 8),
+                                      hintStyle: const TextStyle(
                                           color: Color(0xFFACACAC), fontSize: 14),
                                     ),
                                   ),
@@ -971,7 +969,13 @@ class RegisterScreen extends StatelessWidget {
                                         ),
                                         Expanded(child: Column(
                                           children: [
-                                            Expanded(child: Center(child: Container(child: const Text('حروف',style: TextStyle(fontSize: 25,fontWeight: FontWeight.w600),),))),
+                                            Expanded(child: Center(
+                                                child: Text('حروف'.tr,
+                                                  style: const TextStyle(
+                                                      fontSize: 25,
+                                                      fontWeight: FontWeight.w600
+                                                  ),
+                                                ))),
                                             Padding(
                                               padding: const EdgeInsets.symmetric(vertical: 8),
                                               child: Container(height: 1,color: Colors.black,),
@@ -1009,15 +1013,15 @@ class RegisterScreen extends StatelessWidget {
                                                     LengthLimitingTextInputFormatter(5),
                                                   ],
 
-                                                decoration: const InputDecoration(
+                                                decoration:  InputDecoration(
 
-                                                    label: Text('حروف'),
+                                                    label: Text('حروف'.tr),
                                                     hintText: 'أ ب ج',
-                                                    contentPadding: EdgeInsets.symmetric(vertical: 0,horizontal: 8),
-                                                    border: OutlineInputBorder(),
-                                                    labelStyle: TextStyle(color: Colors.black, letterSpacing: 10.0,),
-                                                    enabledBorder: OutlineInputBorder(),
-                                                    focusedBorder: OutlineInputBorder()
+                                                    contentPadding: const EdgeInsets.symmetric(vertical: 0,horizontal: 8),
+                                                    border: const OutlineInputBorder(),
+                                                    labelStyle: const TextStyle(color: Colors.black, letterSpacing: 10.0,),
+                                                    enabledBorder: const OutlineInputBorder(),
+                                                    focusedBorder: const OutlineInputBorder()
 
                                                 ),
                                               ),
@@ -1030,7 +1034,7 @@ class RegisterScreen extends StatelessWidget {
                                         ),
                                         Expanded(child: Column(
                                           children: [
-                                            Expanded(child: Center(child: Container(child: const Text('أرقام',style: TextStyle(fontSize: 25,fontWeight: FontWeight.w600),),))),
+                                            Expanded(child: Center(child:  Text('أرقام'.tr,style: const TextStyle(fontSize: 25,fontWeight: FontWeight.w600),))),
                                             Padding(
                                               padding: const EdgeInsets.symmetric(vertical: 8),
                                               child: Container(height: 1,color: Colors.black,),
@@ -1058,13 +1062,13 @@ class RegisterScreen extends StatelessWidget {
                                                       value.trim();
                                                   controller.update();
                                                 },
-                                                decoration: const InputDecoration(
-                                                    label: Text('أرقام'),
-                                                    contentPadding: EdgeInsets.symmetric(vertical: 0,horizontal: 8),
-                                                    border: OutlineInputBorder(),
-                                                    labelStyle: TextStyle(color: Colors.black),
-                                                    enabledBorder: OutlineInputBorder(),
-                                                    focusedBorder: OutlineInputBorder()
+                                                decoration:  InputDecoration(
+                                                    label: Text('أرقام'.tr),
+                                                    contentPadding: const EdgeInsets.symmetric(vertical: 0,horizontal: 8),
+                                                    border: const OutlineInputBorder(),
+                                                    labelStyle: const TextStyle(color: Colors.black),
+                                                    enabledBorder: const OutlineInputBorder(),
+                                                    focusedBorder: const OutlineInputBorder()
                                                 ),
                                               ),
                                             )),
@@ -1172,16 +1176,16 @@ class RegisterScreen extends StatelessWidget {
                                         controller.update();
                                       },
                                       decoration: InputDecoration(
-                                        hintText: 'Driving license from front',
+                                        hintText: 'Driving license from front'.tr,
                                         border: InputBorder.none,
                                         suffixIcon: controller
                                                     .drivingLicenseFromFront !=
                                                 null
                                             ? Row(
                                                 mainAxisSize: MainAxisSize.min,
-                                                children: const [
-                                                  Text('تعديل'),
-                                                  Icon(
+                                                children:  [
+                                                  Text('edit'.tr),
+                                                  const Icon(
                                                     Icons.check,
                                                     color: Colors.green,
                                                   ),
@@ -1275,16 +1279,16 @@ class RegisterScreen extends StatelessWidget {
                                       },
                                       decoration: InputDecoration(
                                         hintText:
-                                            'driving license from behind',
+                                            'driving license from behind'.tr,
                                         border: InputBorder.none,
                                         suffixIcon: controller
                                                     .drivingLicenseFromBehindImage !=
                                                 null
                                             ? Row(
                                                 mainAxisSize: MainAxisSize.min,
-                                                children: const [
-                                                  Text('تعديل'),
-                                                  Icon(
+                                                children:  [
+                                                  Text('edit'.tr),
+                                                  const Icon(
                                                     Icons.check,
                                                     color: Colors.green,
                                                   ),
@@ -1385,9 +1389,9 @@ class RegisterScreen extends StatelessWidget {
                                                 ? Row(
                                                     mainAxisSize:
                                                         MainAxisSize.min,
-                                                    children: const [
-                                                      Text('تعديل'),
-                                                      Icon(
+                                                    children:  [
+                                                      Text('edit'.tr),
+                                                      const Icon(
                                                         Icons.check,
                                                         color: Colors.green,
                                                       ),
@@ -1479,16 +1483,16 @@ class RegisterScreen extends StatelessWidget {
                                         controller.update();
                                       },
                                       decoration: InputDecoration(
-                                        hintText: 'Medical examination',
+                                        hintText: 'Medical examination'.tr,
                                         border: InputBorder.none,
                                         suffixIcon: controller
                                                     .medicalExaminationImage !=
                                                 null
                                             ? Row(
                                                 mainAxisSize: MainAxisSize.min,
-                                                children: const [
-                                                  Text('تعديل'),
-                                                  Icon(
+                                                children:  [
+                                                  Text('edit'.tr),
+                                                  const Icon(
                                                     Icons.check,
                                                     color: Colors.green,
                                                   ),
@@ -1581,16 +1585,16 @@ class RegisterScreen extends StatelessWidget {
                                         controller.update();
                                       },
                                       decoration: InputDecoration(
-                                        hintText: 'License plate',
+                                        hintText: 'License plate'.tr,
                                         border: InputBorder.none,
                                         suffixIcon:
                                             controller.licensePlateImage != null
                                                 ? Row(
                                                     mainAxisSize:
                                                         MainAxisSize.min,
-                                                    children: const [
-                                                      Text('تعديل'),
-                                                      Icon(
+                                                    children:  [
+                                                      Text('edit'.tr),
+                                                      const Icon(
                                                         Icons.check,
                                                         color: Colors.green,
                                                       ),
@@ -1682,16 +1686,16 @@ class RegisterScreen extends StatelessWidget {
                                         controller.update();
                                       },
                                       decoration: InputDecoration(
-                                        hintText: 'Car insurance',
+                                        hintText: 'Car insurance'.tr,
                                         border: InputBorder.none,
                                         suffixIcon:
                                             controller.carInsuranceImage != null
                                                 ? Row(
                                                     mainAxisSize:
                                                         MainAxisSize.min,
-                                                    children: const [
-                                                      Text('تعديل'),
-                                                      Icon(
+                                                    children:  [
+                                                      Text('edit'.tr),
+                                                      const Icon(
                                                         Icons.check,
                                                         color: Colors.green,
                                                       ),
@@ -1790,9 +1794,9 @@ class RegisterScreen extends StatelessWidget {
                                                 ? Row(
                                                     mainAxisSize:
                                                         MainAxisSize.min,
-                                                    children: const [
-                                                      Text('تعديل'),
-                                                      Icon(
+                                                    children:  [
+                                                      Text('edit'.tr),
+                                                      const Icon(
                                                         Icons.check,
                                                         color: Colors.green,
                                                       ),
@@ -1810,7 +1814,7 @@ class RegisterScreen extends StatelessWidget {
                               if (controller.drivingLicenseImage != null)
                                 Center(
                                   child: Container(
-                                    margin: EdgeInsets.all(10),
+                                    margin: const EdgeInsets.all(10),
                                     width: MediaQuery.of(context).size.width,
                                     height:
                                         MediaQuery.of(context).size.width * 0.4,
@@ -1869,10 +1873,10 @@ class RegisterScreen extends StatelessWidget {
                                           onTap: () {
                                             // launch('https://.com/en/portal/terms/ar');
                                           },
-                                          child: const Text(
-                                            'الموافقة على شروط الخدمة والخصوصية.',
+                                          child:  Text(
+                                            'accept_terms'.tr,
                                             textAlign: TextAlign.justify,
-                                            style: TextStyle(
+                                            style: const TextStyle(
                                               decoration: TextDecoration.underline,
                                             ),
                                           ),
@@ -1904,17 +1908,17 @@ class RegisterScreen extends StatelessWidget {
                                          context: context,
                                          type: QuickAlertType.info,
                                          confirmBtnColor: AppColors.blue,
-                                         text: 'Your request has been sent successfully, we will inform you once it\'s confirmed',
+                                         text: 'Your request has been sent successfully, we will inform you once it\'s confirmed'.tr,
                                        );
                                        // controller.registerDriver();
                                      }
                                     },
-                                    child: const Padding(
-                                      padding: EdgeInsets.symmetric(
+                                    child:  Padding(
+                                      padding: const EdgeInsets.symmetric(
                                           horizontal: 30, vertical: 12),
                                       child: Text(
-                                        "Register",
-                                        style: TextStyle(
+                                        "Register".tr,
+                                        style: const TextStyle(
                                           color: Colors.white,
                                           fontSize: 20,
                                         ),

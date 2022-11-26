@@ -124,12 +124,12 @@ class _HomeScreenState extends State<HomeScreen> {
                                   BorderRadius.circular(1000)),
                               color: Colors.grey.withOpacity(.2),
                               elevation: 0.1,
-                              child:  const Padding(
-                                  padding: EdgeInsets.symmetric(horizontal: 65.0,vertical: 10),
+                              child:   Padding(
+                                  padding: const EdgeInsets.symmetric(horizontal: 65.0,vertical: 10),
                                   child: Text(
-                                    "You have new order!\nTap for info",
+                                    "You have new order!\nTap for info".tr,
                                     textAlign: TextAlign.center,
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                         color: AppColors.blue,
                                         fontSize: 20
                                     ),
@@ -150,9 +150,9 @@ class _HomeScreenState extends State<HomeScreen> {
                         QuickAlert.show(
                             context: context,
                             type: QuickAlertType.confirm,
-                            text: 'Are you sure do want to make your status offline! you will not be able to receive orders until you back online again.',
-                            confirmBtnText: 'Yes',
-                            cancelBtnText: 'No',
+                            text: 'Are you sure do want to make your status offline! you will not be able to receive orders until you back online again.'.tr,
+                            confirmBtnText: 'Yes'.tr,
+                            cancelBtnText: 'No'.tr,
                             confirmBtnColor: Colors.green,
                             onConfirmBtnTap: (){
                               controller.online = !controller.online;
@@ -174,7 +174,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       child:   Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 35.0,vertical: 10),
                         child: Text(
-                          controller.online?"Online":"Offline",
+                          controller.online?"Online".tr:"Offline".tr,
                           style: const TextStyle(
                             color: Colors.white,
                             fontSize: 20

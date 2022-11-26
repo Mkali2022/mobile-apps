@@ -1,5 +1,6 @@
 import 'package:driver_app/utils/app_colors.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class OrderHistoryWidget extends StatelessWidget {
   const OrderHistoryWidget({Key? key}) : super(key: key);
@@ -28,7 +29,7 @@ class OrderHistoryWidget extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    "Wednesday (16/11/2022",
+                    "Wednesday (16/11/2022)",
                     style: TextStyle(
                       color: Colors.grey,
                       fontSize: 16,
@@ -52,9 +53,9 @@ class OrderHistoryWidget extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(width: 5,),
-                  const Text(
-                    "Pickup: Macdonalds\nqueen rania street building no.13",
-                    style: TextStyle(
+                   Text(
+                    "${"Pickup:".tr} Macdonalds\nqueen rania street building no.13",
+                    style: const TextStyle(
                       color: AppColors.blue,
                       fontWeight: FontWeight.w500,
                       fontSize: 16,
@@ -91,9 +92,9 @@ class OrderHistoryWidget extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(width: 5,),
-                  const Text(
-                    "Drop off: Amman,abu nsair\ndreams building no.34, apartment no.402",
-                    style: TextStyle(
+                   Text(
+                    "${"Drop off:".tr} Amman,abu nsair\ndreams building no.34, apartment no.402",
+                    style: const TextStyle(
                       color: AppColors.blue,
                       fontWeight: FontWeight.w500,
                       fontSize: 16,
@@ -106,10 +107,10 @@ class OrderHistoryWidget extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10),
               child: Row(
-                children: const [
+                children:  [
                   Text(
-                    "Status: Delivered",
-                    style: TextStyle(
+                    "${"Status:".tr} Delivered",
+                    style: const TextStyle(
                       color: AppColors.blue,
                       fontWeight: FontWeight.w500,
                       fontSize: 16,
@@ -121,10 +122,10 @@ class OrderHistoryWidget extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 5),
               child: Row(
-                children: const [
+                children:  [
                   Text(
-                    "Payment method: Cash",
-                    style: TextStyle(
+                    "${"Payment method:".tr} Cash",
+                    style: const TextStyle(
                       color: AppColors.blue,
                       fontWeight: FontWeight.w500,
                       fontSize: 16,
@@ -136,10 +137,10 @@ class OrderHistoryWidget extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 5),
               child: Row(
-                children: const [
+                children:  [
                   Text(
-                    "Total amount: 8.95 JOD",
-                    style: TextStyle(
+                    "${"Total amount:".tr} 8.95 JOD",
+                    style: const TextStyle(
                       color: AppColors.blue,
                       fontWeight: FontWeight.w500,
                       fontSize: 16,

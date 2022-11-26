@@ -7,7 +7,9 @@ import 'package:quickalert/models/quickalert_type.dart';
 import 'package:quickalert/widgets/quickalert_dialog.dart';
 
 import '../screens/history_screen.dart';
-import '../screens/recieved_order_screen.dart';
+import '../screens/notifications_screen.dart';
+import '../screens/payment_screen.dart';
+import '../screens/settings_screen.dart';
 
 class DrawerWidget extends StatelessWidget {
   const DrawerWidget({Key? key}) : super(key: key);
@@ -61,10 +63,10 @@ class DrawerWidget extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 5),
               child: Row(
-                children: const [
+                children:  [
                   Text(
-                      "Total orders: 24",
-                    style: TextStyle(
+                    "${"Total orders:".tr} 24",
+                    style: const TextStyle(
                       color: Colors.black54,
                         fontSize: 13,
                       fontFamily: ""
@@ -76,10 +78,10 @@ class DrawerWidget extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 5),
               child: Row(
-                children: const [
+                children:  [
                   Text(
-                      "Total collected money: 97 JOD",
-                    style: TextStyle(
+                       "${"Total collected money:".tr}97 JOD",
+                    style: const TextStyle(
                         color: Colors.black54,
                         fontSize: 13,
                         fontFamily: ""
@@ -91,10 +93,10 @@ class DrawerWidget extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 5),
               child: Row(
-                children: const [
+                children:  [
                   Text(
-                      "Total amount: -48 JOD",
-                    style: TextStyle(
+                      "${"Total amount:".tr} -48 JOD",
+                    style: const TextStyle(
                         color: Colors.black54,
                         fontSize: 13,
                         fontFamily: ""
@@ -111,7 +113,7 @@ class DrawerWidget extends StatelessWidget {
             ),
             contentDrawer(
                 context: context,
-                text: "Home page",
+                text: "Home page".tr,
                 icon:  Icon(
                   Icons.home,
                   color: AppColors.blue.withOpacity(.7),
@@ -123,18 +125,29 @@ class DrawerWidget extends StatelessWidget {
                 }),
             contentDrawer(
                 context: context,
-                text: "Payment",
+                text: "Notifications".tr,
+                icon:  Icon(
+                  Icons.notifications,
+                  color: AppColors.blue.withOpacity(.7),
+                  size: 30,
+                ),
+                function: () {
+              Get.to(()=>const NotificationsScreen());
+                }),
+            contentDrawer(
+                context: context,
+                text: "Payment".tr,
                 icon:  Icon(
                   Icons.payment,
                   color: AppColors.blue.withOpacity(.7),
                   size: 30,
                 ),
                 function: () {
-                  Navigator.pop(context);
+                  Get.to(()=> const PaymentScreen());
                 }),
             contentDrawer(
                 context: context,
-                text: "Orders history",
+                text: "Orders history".tr,
                 icon:  Icon(
                   Icons.history,
                   color: AppColors.blue.withOpacity(.7),
@@ -145,18 +158,18 @@ class DrawerWidget extends StatelessWidget {
                 }),
             contentDrawer(
                 context: context,
-                text: "Settings",
+                text: "Settings".tr,
                 icon:  Icon(
                   Icons.settings_applications,
                   color: AppColors.blue.withOpacity(.7),
                   size: 30,
                 ),
                 function: () {
-                  Navigator.pop(context);
+                  Get.to(()=>const SettingsScreen());
                 }),
             contentDrawer(
                 context: context,
-                text: "Logout",
+                text: "Logout".tr,
                 icon:  Icon(
                   Icons.logout,
                   color: AppColors.blue.withOpacity(.7),
@@ -166,9 +179,9 @@ class DrawerWidget extends StatelessWidget {
                   QuickAlert.show(
                     context: context,
                     type: QuickAlertType.confirm,
-                    text: 'Are you sure do want to logout?',
-                    confirmBtnText: 'Yes',
-                    cancelBtnText: 'No',
+                    text: 'Are you sure do want to logout?'.tr,
+                    confirmBtnText: 'Yes'.tr,
+                    cancelBtnText: 'No'.tr,
                     confirmBtnColor: Colors.green,
                     onConfirmBtnTap: (){
                       Get.to(()=> LoginScreen());
@@ -180,9 +193,9 @@ class DrawerWidget extends StatelessWidget {
                 QuickAlert.show(
                   context: context,
                   type: QuickAlertType.confirm,
-                  text: 'Are you sure do want to delete your account?',
-                  confirmBtnText: 'Yes',
-                  cancelBtnText: 'No',
+                  text: 'Are you sure do want to delete your account?'.tr,
+                  confirmBtnText: 'Yes'.tr,
+                  cancelBtnText: 'No'.tr,
                   confirmBtnColor: Colors.green,
                     onConfirmBtnTap: (){
                       Get.to(()=> LoginScreen());
@@ -197,11 +210,11 @@ class DrawerWidget extends StatelessWidget {
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: const [
+                      children:  [
                         Text(
-                          'Delete my account',
+                          'Delete my account'.tr,
                           textAlign: TextAlign.end,
-                          style: TextStyle(
+                          style: const TextStyle(
                               color: Colors.red,
                               fontSize: 16,
                               fontWeight: FontWeight.bold

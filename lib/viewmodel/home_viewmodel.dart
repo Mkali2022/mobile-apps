@@ -18,12 +18,13 @@ class HomeViewModel extends GetxController {
   MarkerId currentMarkerId = const MarkerId('currentMarker');
   bool online = true;
   bool remove = true;
+  StreamSubscription<LocationData>? locationSubscription;
 
   @override
   void onInit() {
     try {
       requestPermission();
-      location.onLocationChanged.listen((event) {
+      locationSubscription = location.onLocationChanged.listen((event) {
         // log('$currentLocation', name: 'currentLocation');
         currentLocation = LatLng(event.latitude!, event.longitude!);
         update();
@@ -68,10 +69,10 @@ class HomeViewModel extends GetxController {
       mapController.complete(googleMapController);
     }
 
-    location.getLocation().then((event) async {
+     location.getLocation().then((event) async {
       final GoogleMapController controller = await mapController.future;
       try {
-        controller
+         controller
             .animateCamera(CameraUpdate.newLatLngBounds(boundsFromLatLngList(markers.toList()),100))
             .then((value) {
           markers.removeWhere((element) => element.markerId == currentMarkerId);
@@ -86,7 +87,7 @@ class HomeViewModel extends GetxController {
         print("ERRORR:$e");
       }
     });
-    location.onLocationChanged.listen((event) async {
+    locationSubscription = location.onLocationChanged.listen((event) async {
       final GoogleMapController controller = await mapController.future;
       try {
         controller
